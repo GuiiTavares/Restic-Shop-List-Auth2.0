@@ -1,4 +1,5 @@
 # ShopList
+Por favor, verificar clientId e apiKey na caixa de texto da atividade.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
 
