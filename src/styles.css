@@ -1,0 +1,51 @@
+.login-area {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-area > button {
+    color: white;
+    font-weight: 600;
+    width: max-content;
+    appearance: none;
+    border: 1px solid #077799;
+    outline: none;
+    padding: 10px 40px;
+    background: #044052;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    text-transform: uppercase;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.login-area p {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.login-area > button:hover {
+    border: 1px solid #044052;
+    background: #01151b;
+    color: white;
+}
+
+.input-buttons {
+    display: flex;
+}

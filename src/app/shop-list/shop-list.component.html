@@ -1,0 +1,34 @@
+<div *ngIf="isAuthenticated; else notAuthenticated" class="shopping-list">
+  <h2>Minha Lista de Compras</h2>
+  <div class="input-buttons">
+    <input [(ngModel)]="newItem" placeholder="Novo item" />
+    <button (click)="addItem()">Adicionar</button>
+  </div>
+
+  <h3>Itens não comprados</h3>
+  <ul>
+    <li *ngFor="let item of unpurchasedItems">
+      <span [class.purchased]="item.purchased">{{ item.title }}</span>
+      <div class="list-icons">
+        <mat-icon (click)="markAsPurchased(item)" fontIcon="check">Marcar como comprado</mat-icon>
+        <mat-icon (click)="editItem(item)" fontIcon="edit">Editar</mat-icon>
+        <mat-icon (click)="removeItem(item)" fontIcon="delete">Remover</mat-icon>
+      </div>
+    </li>
+  </ul>
+
+  <h3>Itens comprados</h3>
+  <ul>
+    <li *ngFor="let item of purchasedItems">
+      <span [class.purchased]="item.purchased">{{ item.title }}</span>
+      <div class="list-icons">
+        <mat-icon (click)="markAsPurchased(item)" fontIcon="close">Marcar como não comprado</mat-icon>
+        <mat-icon (click)="removeItem(item)" fontIcon="delete">Remover</mat-icon>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<ng-template #notAuthenticated class="login-area">
+  <p>Por favor, faça login para acessar a lista de compras.</p>
+</ng-template>

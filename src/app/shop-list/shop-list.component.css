@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons" );
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #044052;
+  font-weight: 600;
+}
+
+.shopping-list {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #044052;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #044052;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+.list-icons{
+  display: flex;
+  gap: 4px;
+}
+.purchased {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.purchased:hover {
+  background-color: #e8e8e8;
+}
+
+li button {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.shopping-list h2 {
+  border-bottom: 2px solid #044052;
+  padding-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .shopping-list {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input {
+    width: 60%;
+    margin: 0 5px 8px 0;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  li button {
+    margin-top: 5px;
+  }
+}
